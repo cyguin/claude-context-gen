@@ -1,0 +1,64 @@
+{
+  "name": "@cyguin/claude-context-gen",
+  "version": "2.0.1",
+  "description": "Generate CLAUDE.md and AGENTS.md context files for AI coding assistants from an interactive CLI.",
+  "keywords": [
+    "claude",
+    "claude-code",
+    "ai",
+    "llm",
+    "context",
+    "prompt",
+    "readme",
+    "agents",
+    "developer-tools",
+    "cli"
+  ],
+  "bin": {
+    "claude-context-gen": "dist/index.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cyguin/claude-context-gen.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cyguin/claude-context-gen/issues"
+  },
+  "homepage": "https://github.com/cyguin/claude-context-gen#readme",
+  "files": [
+    "dist",
+    ".env.example",
+    "LICENSE",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "build": "tsc --project tsconfig.json",
+    "dev": "tsc --project tsconfig.json --watch",
+    "test": "vitest run",
+    "prepublishOnly": "npm run build"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "author": {
+    "name": "cyguin LLC",
+    "url": "https://cyguin.com"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "tsup": "^8.5.1",
+    "typescript": "^6.0.2",
+    "vitest": "^4.1.1"
+  },
+  "dependencies": {
+    "@clack/prompts": "0.7.0",
+    "dotenv": "^16.6.1"
+  }
+}
