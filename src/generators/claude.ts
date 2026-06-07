@@ -1,15 +1,5 @@
 import type { UserAnswers } from '../types';
 
-/**
- * Generate a CLAUDE.md string from collected user answers.
- *
- * Design rules:
- * - Always opens with `@AGENTS.md` on the first line so Claude Code imports
- *   the full agent rules document automatically.
- * - Adds Claude-specific behavioral rules that complement AGENTS.md.
- * - Conditionally adds a Test Discipline section when testingSetup is non-empty.
- * - Pure sync function: no async, no I/O, no side effects.
- */
 export function generateClaudeMd(answers: UserAnswers): string {
   const testDisciplineSection = answers.testingSetup?.trim()
     ? `## Test Discipline\n\n- Run the relevant test suite after code changes.\n- Test runner: ${answers.testingSetup.trim()}\n- Do not mark a task done if tests are failing.`

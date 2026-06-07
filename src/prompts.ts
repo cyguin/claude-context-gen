@@ -1,15 +1,5 @@
 import type { UserAnswers } from './types';
 
-/**
- * Runs the interactive prompt session and returns all collected answers.
- *
- * Observability:
- * - Each prompt field is collected via p.group(); if any prompt is cancelled,
- *   the onCancel handler calls p.cancel() and exits 0.
- * - p.intro() and p.outro() log visible markers to the terminal that bracket
- *   the session.
- * - The returned UserAnswers object is JSON-serializable.
- */
 export async function runPrompts(): Promise<UserAnswers> {
   const p = await import('@clack/prompts');
 

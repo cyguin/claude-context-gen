@@ -1,16 +1,5 @@
 import type { UserAnswers } from '../types';
 
-/**
- * Generate a structured AGENTS.md string from collected user answers.
- *
- * Design rules:
- * - Every interpolation site guards against empty strings.
- * - Optional sections (Testing, CI/CD) are omitted entirely when the
- *   corresponding answer is empty; they are never emitted as empty shells.
- * - Always-present sections (Stack, Workflow, What NOT to Do, Done Condition)
- *   fall back to safe placeholder text so no "undefined" can leak through.
- * - This is a pure sync function: no async, no I/O, no side effects.
- */
 export function generateAgentsMd(answers: UserAnswers): string {
   const description = answers.projectDescription?.trim() || 'This project';
   const language = answers.language?.trim() || 'not specified';

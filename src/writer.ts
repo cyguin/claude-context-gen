@@ -5,11 +5,8 @@ import { generateClaudeMd } from './generators/claude';
 import type { AppConfig, UserAnswers } from './types';
 
 /**
- * Write CLAUDE.md and AGENTS.md to the current working directory.
- *
- * - If either file already exists, the user is prompted before overwriting.
- * - Cancelling or declining the overwrite exits cleanly with code 0.
- * - Uses p.log.success() because prompts.ts already emits one outro box.
+ * Prompts before overwriting existing files, then writes both output files
+ * to cwd. Exits cleanly if user declines overwrite.
  */
 export async function writeFiles(answers: UserAnswers, config: AppConfig): Promise<void> {
   const p = await import('@clack/prompts');
