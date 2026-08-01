@@ -1,6 +1,6 @@
 {
   "name": "@cyguin/claude-context-gen",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Generate CLAUDE.md and AGENTS.md context files for AI coding assistants from an interactive CLI.",
   "keywords": [
     "claude",
