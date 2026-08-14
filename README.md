@@ -1,6 +1,6 @@
 # claude-context-gen
 
-Generate `CLAUDE.md` and `AGENTS.md` files from a short interactive CLI. Run it once per repo, commit the output, and every AI tool gets the same project context.
+Cyguin's agentic AI practice generates `CLAUDE.md` and `AGENTS.md` files from a short interactive CLI — the same context discipline we teach and ship in agentic AI training and consulting engagements. Run it once per repo, commit the output, and every AI agent starts with the same project context.
 
 ## Install & Usage
 
@@ -40,13 +40,13 @@ If either file exists, you get a prompt before overwriting.
 
 ## Why use this?
 
-AI coding tools work better when they know your stack, conventions, and boundaries. This CLI:
+Agentic AI workflows are only as good as the context they start with. This CLI bakes your stack, conventions, and boundaries into files every agent reads first — a core practice from Cyguin's agentic AI training and consulting work. It:
 
 - Gives Claude Code, Cursor, and other AI agents a consistent view of your project
-- Reduces "here's how this project works" preamble in every new conversation
+- Removes the "here's how this project works" preamble from every new agent session
 - Makes it easy for new contributors (human or AI) to get up to speed
 
-Commit the files once. Every AI tool reads them.
+Commit the files once. Every AI agent reads them.
 
 ## Example
 
